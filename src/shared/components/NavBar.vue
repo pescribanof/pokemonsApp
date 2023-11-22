@@ -23,9 +23,7 @@ withDefaults(defineProps<Props>(), {
       <RouterLink
           v-for="link of $props.links"
           :key="link.path"
-          :to="link.path">{{ link.title }}</RouterLink>
-
-        
+          :to="link.path">{{ link.title }}</RouterLink>      
     </nav>
 </template>
 

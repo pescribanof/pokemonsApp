@@ -5,9 +5,8 @@ import  { routerLinks }  from '@/router/list-routes';
 </script>
 
 <template>
-  <header>
+  <header>Test
     <NavBar title="PokemonApp" :links="routerLinks" />
-
   </header>
 
   <RouterView />
