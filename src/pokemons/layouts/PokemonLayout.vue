@@ -29,3 +29,10 @@ const routeLinks: RouterLinkInfo[] = pokemonRoute.children?.map(({ name, path, p
         </Suspense> -->
     </div>
 </template>
+
+
+<style scoped>
+html {
+    width: 100%;
+}
+</style>

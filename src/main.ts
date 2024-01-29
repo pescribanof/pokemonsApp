@@ -5,11 +5,22 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-import { VueQueryPlugin } from "@tanstack/vue-query";
+import { QueryClient, VueQueryPlugin } from "@tanstack/vue-query";
+
 
 const app = createApp(App)
 
-app.use(VueQueryPlugin)
+const queryClient = new QueryClient({
+    defaultOptions: { 
+        queries: { 
+            staleTime: 1000 * 120 // 2 minutos 
+        } 
+    },
+  })
+  const options = { queryClient }
+
+app.use(VueQueryPlugin, options);
+
 //VueQueryPlugin.install(app, {
 //    queryClientConfig: {
 //        defaultOptions: {

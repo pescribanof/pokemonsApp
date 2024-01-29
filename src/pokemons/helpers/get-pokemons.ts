@@ -21,3 +21,4 @@ export const getPokemons = async(): Promise<Pokemon[]> => {
 
     return pokemonList;
 }
+
